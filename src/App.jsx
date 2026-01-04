@@ -10,7 +10,7 @@ import Signup from "./pages/Signup";
 import About from "./pages/About";
 
 import PrivateRoute from "./components/PrivateRoute";
-import Contact from "./pages/contact";
+import Contact from "./pages/Contact";
 import FallbackPage from "./pages/FallbackPage";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./components/ResetPassword";
