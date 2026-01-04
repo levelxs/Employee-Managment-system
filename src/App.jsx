@@ -8,7 +8,6 @@ import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import About from "./pages/About";
-
 import PrivateRoute from "./components/PrivateRoute";
 import Contact from "./pages/Contact";
 import FallbackPage from "./pages/FallbackPage";

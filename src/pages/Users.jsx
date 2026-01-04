@@ -26,14 +26,14 @@ function Users() {
       if (editId) {
         // update -edit
         await axios.put(
-          `http://localhost:5000/employe/update/${editId}`,
+          `${import.meta.env.VITE_API_URL}/employe/update/${editId}`,
           data
         );
         alert("Employee updated ✅");
       } else {
         // create - register
         await axios.post(
-          "http://localhost:5000/employe/register",
+          "${import.meta.env.VITE_API_URL}/employe/register",
           data
         );
         alert("Employee registered ✅");
@@ -64,7 +64,7 @@ function Users() {
   const fetchEmployees = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/employe/showData");
+      const res = await axios.get("${import.meta.env.VITE_API_URL}/employe/showData");
       setEmployees(res.data);
       setLoading(false);
     } catch (error) {
@@ -92,7 +92,7 @@ function Users() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/employe/delete/${id}`
+        `${import.meta.env.VITE_API_URL}/employe/delete/${id}`
       );
       alert("Employee deleted ✅");
       fetchEmployees();
