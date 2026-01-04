@@ -26,14 +26,14 @@ function Users() {
       if (editId) {
         // update -edit
         await axios.put(
-          `${import.meta.env.VITE_API_URL}/employe/update/${editId}`,
+          `https://employee-managment-system-backend-3.onrender.com/employe/update/${editId}`,
           data
         );
         alert("Employee updated ✅");
       } else {
         // create - register
         await axios.post(
-          "${import.meta.env.VITE_API_URL}/employe/register",
+          "https://employee-managment-system-backend-3.onrender.com/employe/register",
           data
         );
         alert("Employee registered ✅");
@@ -64,7 +64,7 @@ function Users() {
   const fetchEmployees = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/employe/showData");
+      const res = await axios.get("https://employee-managment-system-backend-3.onrender.com/employe/showData");
       setEmployees(res.data);
       setLoading(false);
     } catch (error) {
@@ -92,7 +92,7 @@ function Users() {
 
     try {
       await axios.delete(
-        `${import.meta.env.VITE_API_URL}/employe/delete/${id}`
+        `https://employee-managment-system-backend-3.onrender.com/employe/delete/${id}`
       );
       alert("Employee deleted ✅");
       fetchEmployees();

@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/auth/login",
+        "https://employee-managment-system-backend-3.onrender.com/api/auth/login",
         data
       );
       if (res.data.success) {

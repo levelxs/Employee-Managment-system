@@ -13,7 +13,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/auth/register",
+        "https://employee-managment-system-backend-3.onrender.com/api/auth/register",
         data
       );
 
