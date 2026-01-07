@@ -34,10 +34,21 @@
 /* Mobile */
 @media (max-width: 768px) {
   .sidebar {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -260px;
+    height: 100vh;
+    z-index: 1050;
+    transition: all 0.3s ease;
   }
 
-  .main-content {
-    padding: 16px;
+  .sidebar.open {
+    left: 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 }

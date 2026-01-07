@@ -9,7 +9,7 @@ const ForgotPassword = () => {
         e.preventDefault();
         try {
             const res = await axios.post(
-                "$https://employee-managment-system-backend-3.onrender.com/api/auth/forgot-password",
+                "http://localhost:5000/api/auth/forgot-password",
                 { email }
             );
             alert(res.data.message);
