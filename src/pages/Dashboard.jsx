@@ -26,7 +26,7 @@ function Dashboard() {
 
   const fetchDashboardData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/employe/dashboardData");
+      const res = await axios.get("https://employee-managment-system-backend-3.onrender.com/employe/dashboardData");
       if (res.data.success) {
         setStats(res.data.dashboard);
         setEmployees(res.data.employees);

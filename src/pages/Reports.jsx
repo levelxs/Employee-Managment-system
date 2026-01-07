@@ -23,7 +23,7 @@ function Reports() {
 
   const fetchReportData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/employe/dashboardData"); // same API as dashboard
+      const res = await axios.get("https://employee-managment-system-backend-3.onrender.com/employe/dashboardData"); // same API as dashboard
       if (res.data.success) {
         // 1️⃣ Stats
         const { totalEmployees, activeEmployees, inactiveEmployees } = res.data.dashboard;
